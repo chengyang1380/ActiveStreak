@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FD01B002D64D5F90076F93C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD01AFF2D64D5F90076F93C /* ComposableArchitecture */; };
+		0F14CA402DF56D2E00931A9C /* PublicApp in Frameworks */ = {isa = PBXBuildFile; productRef = 0F14CA3F2DF56D2E00931A9C /* PublicApp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F14C9632DF55A6400931A9C /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
 		0FD01AC22D64D4A10076F93C /* ActiveStreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveStreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01AD22D64D4A20076F93C /* ActiveStreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01ADC2D64D4A20076F93C /* ActiveStreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,11 +45,6 @@
 			path = ActiveStreakTests;
 			sourceTree = "<group>";
 		};
-		0FD01ADF2D64D4A20076F93C /* ActiveStreakUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ActiveStreakUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD01B002D64D5F90076F93C /* ComposableArchitecture in Frameworks */,
+				0F14CA402DF56D2E00931A9C /* PublicApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F14CA3E2DF56D2E00931A9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0FD01AB92D64D4A00076F93C = {
 			isa = PBXGroup;
 			children = (
+				0F14C9632DF55A6400931A9C /* Features */,
 				0FD01AC42D64D4A10076F93C /* ActiveStreak */,
 				0FD01AD52D64D4A20076F93C /* ActiveStreakTests */,
-				0FD01ADF2D64D4A20076F93C /* ActiveStreakUITests */,
+				0F14CA3E2DF56D2E00931A9C /* Frameworks */,
 				0FD01AC32D64D4A10076F93C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,7 +121,7 @@
 			);
 			name = ActiveStreak;
 			packageProductDependencies = (
-				0FD01AFF2D64D5F90076F93C /* ComposableArchitecture */,
+				0F14CA3F2DF56D2E00931A9C /* PublicApp */,
 			);
 			productName = ActiveStreak;
 			productReference = 0FD01AC22D64D4A10076F93C /* ActiveStreak.app */;
@@ -159,9 +163,6 @@
 			dependencies = (
 				0FD01ADE2D64D4A20076F93C /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				0FD01ADF2D64D4A20076F93C /* ActiveStreakUITests */,
-			);
 			name = ActiveStreakUITests;
 			packageProductDependencies = (
 			);
@@ -202,7 +203,6 @@
 			mainGroup = 0FD01AB92D64D4A00076F93C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0FD01AFE2D64D5F90076F93C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0FD01AC32D64D4A10076F93C /* Products */;
@@ -570,22 +570,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		0FD01AFE2D64D5F90076F93C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.17.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		0FD01AFF2D64D5F90076F93C /* ComposableArchitecture */ = {
+		0F14CA3F2DF56D2E00931A9C /* PublicApp */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0FD01AFE2D64D5F90076F93C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			productName = PublicApp;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
