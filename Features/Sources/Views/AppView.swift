@@ -5,7 +5,6 @@
 //  Created by ChengYangChen on 6/8/25.
 //
 
-
 import ComposableArchitecture
 import Features
 import SwiftUI
@@ -18,8 +17,7 @@ package struct AppView: View {
     }
 
     package var body: some View {
-        Text("123")
-//        HomeView(store: store.scope(state: \.home, action: \.home))
+        HomeView(store: store.scope(state: \.home, action: \.home))
             .task {
                 await store.send(.task).finish()
             }

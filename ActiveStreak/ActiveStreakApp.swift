@@ -7,11 +7,8 @@
 
 import SwiftUI
 
-@main
 struct ActiveStreakApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        WindowGroup {}
     }
 }
