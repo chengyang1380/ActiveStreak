@@ -1,5 +1,5 @@
 //
-//  AddWorkoutEntry.swift
+//  AddWorkoutEntryFeature.swift
 //  ActiveStreakPackage
 //
 //  Created by ChengYangChen on 6/8/25.
@@ -16,7 +16,7 @@ package struct AddWorkoutEntryFeature: Equatable {
         package var muscleGroups = MuscleGroup.allCases
         package var muscleGroupSelected: MuscleGroup? = nil
         package var exerciseNames: [String] = []
-        package var exerciseNameSelected: String = ""
+        package var exerciseNameSelected: String?
         package var weight: String = ""
         package init() {}
     }

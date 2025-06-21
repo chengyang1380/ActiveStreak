@@ -8,6 +8,7 @@
 import ComposableArchitecture
 import Features
 import Foundation
+import Models
 import SwiftUI
 
 package struct AddWorkoutEntryView: View {
@@ -20,6 +21,8 @@ package struct AddWorkoutEntryView: View {
             Form {
                 Section("Step 1 Muscle Group") {
                     Picker("", selection: $store.muscleGroupSelected) {
+                        Text("None")
+                            .tag(nil as MuscleGroup?)
                         ForEach(store.state.muscleGroups, id: \.self) { group in
                             Text(group.rawValue)
                                 .tag(Optional(group))
@@ -35,7 +38,7 @@ package struct AddWorkoutEntryView: View {
                             .tag(nil as String?)
                         ForEach(store.state.exerciseNames, id: \.self) {
                             Text($0)
-                                .tag($0)
+                                .tag(Optional($0))
                         }
                     }
                 }
@@ -77,6 +80,11 @@ package struct AddWorkoutEntryView: View {
 
 extension UIApplication {
     func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
