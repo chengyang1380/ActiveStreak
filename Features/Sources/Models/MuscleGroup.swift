@@ -7,16 +7,6 @@
 
 import Foundation
 
-//public enum MuscleGroup: Codable, Equatable {
-//    case chest(ChestExercise)
-//    case back(BackExercise)
-//    case legs(LegExercise)
-//    case biceps(BicepsExercise)
-//    case triceps(TricepsExercise)
-//    case shoulders(ShouldersExercise)
-//    case abs(AbsExercise)
-//}
-
 public enum MuscleGroup: String, Identifiable, CaseIterable, Equatable {
     public var id: String { rawValue }
 
