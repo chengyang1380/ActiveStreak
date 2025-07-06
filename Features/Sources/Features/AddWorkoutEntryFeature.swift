@@ -6,11 +6,12 @@
 //
 
 import ComposableArchitecture
+import DependencyClients
 import Foundation
 import Models
 
 @Reducer
-package struct AddWorkoutEntryFeature: Equatable {
+package struct AddWorkoutEntryFeature {
     @ObservableState
     package struct State: Equatable {
         package var muscleGroups = MuscleGroup.allCases
@@ -18,6 +19,7 @@ package struct AddWorkoutEntryFeature: Equatable {
         package var exerciseNames: [String] = []
         package var exerciseNameSelected: String?
         package var weight: String = ""
+        package var toastMessage: String?
         package init() {}
     }
 
@@ -25,7 +27,12 @@ package struct AddWorkoutEntryFeature: Equatable {
         case binding(BindingAction<State>)
         case moscleGroupChanged
         case saveButtonTapped
+        case dismissToast
+        case inputError
+        case saveSuccess
     }
+
+    @Dependency(\.workoutEntryClient) var workoutEntryClient
 
     package init() {}
 
@@ -38,19 +45,57 @@ package struct AddWorkoutEntryFeature: Equatable {
         switch action {
         case .binding(\.muscleGroupSelected):
             return .send(.moscleGroupChanged)
+
         case .moscleGroupChanged:
             updateExerciseNames(&state)
             return .none
+
         case .saveButtonTapped:
-            return .none
+            guard let muscleGroup = state.muscleGroupSelected?.rawValue,
+                let exerciseName = state.exerciseNameSelected,
+                let weight = Double(state.weight)
+            else {
+                return .send(.inputError)
+            }
+            return .run { send in
+                let _ = try await workoutEntryClient.create(
+                    WorkoutEntryDTO.init(
+                        muscleGroup: muscleGroup,
+                        exerciseName: exerciseName,
+                        weight: weight
+                    )
+                )
+                await send(.saveSuccess)
+            }
+
         case .binding:
             return .none
+
+        case .dismissToast:
+            state.toastMessage = nil
+            return .none
+
+        case .inputError:
+            state.toastMessage = "Error"
+            return .run { send in
+                try await Task.sleep(for: .seconds(2))
+                await send(.dismissToast)
+            }
+
+        case .saveSuccess:
+            state.toastMessage = "Successfully saved!"
+            return .run { send in
+                try await Task.sleep(for: .seconds(2))
+                await send(.dismissToast)
+            }
         }
     }
 }
 
 extension AddWorkoutEntryFeature {
-    private func updateExerciseNames(_ state: inout AddWorkoutEntryFeature.State) {
+    private func updateExerciseNames(
+        _ state: inout AddWorkoutEntryFeature.State
+    ) {
         guard let group = state.muscleGroupSelected else {
             return
         }

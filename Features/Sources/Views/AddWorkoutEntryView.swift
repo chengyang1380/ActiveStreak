@@ -63,7 +63,34 @@ package struct AddWorkoutEntryView: View {
                 }
             }
             .navigationTitle(Text("Add Wrokout Entry"))
+            .overlay(
+                Group {
+                    if let message = store.state.toastMessage {
+                        ToastView(message: message)
+                            .transition(
+                                .move(edge: .top)
+                                    .combined(with: .opacity)
+                            )
+                            .zIndex(1)
+                    }
+                }
+            )
         }
+    }
+}
+
+private struct ToastView: View {
+    let message: String
+    var body: some View {
+        Text(message)
+            .padding(.horizontal, 24)
+            .padding(.vertical, 12)
+            .background(.ultraThinMaterial)
+            .cornerRadius(12)
+            .shadow(radius: 8)
+            .padding(.top, 40)
+            .foregroundColor(.primary)
+            .font(.headline)
     }
 }
 
