@@ -32,6 +32,7 @@
 		0FD01AC22D64D4A10076F93C /* ActiveStreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveStreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01AD22D64D4A20076F93C /* ActiveStreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01ADC2D64D4A20076F93C /* ActiveStreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FE4E9B52E1A9C9500D44A34 /* Features.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Features.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -83,6 +84,7 @@
 		0FD01AB92D64D4A00076F93C = {
 			isa = PBXGroup;
 			children = (
+				0FE4E9B52E1A9C9500D44A34 /* Features.xctestplan */,
 				0F14C9632DF55A6400931A9C /* Features */,
 				0FD01AC42D64D4A10076F93C /* ActiveStreak */,
 				0FD01AD52D64D4A20076F93C /* ActiveStreakTests */,
