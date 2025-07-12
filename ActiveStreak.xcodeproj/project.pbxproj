@@ -32,7 +32,7 @@
 		0FD01AC22D64D4A10076F93C /* ActiveStreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveStreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01AD22D64D4A20076F93C /* ActiveStreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01ADC2D64D4A20076F93C /* ActiveStreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FE4E9B52E1A9C9500D44A34 /* Features.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Features.xctestplan; sourceTree = "<group>"; };
+		0FE5B92A2E2259F8001C4E08 /* ActiveStreak.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ActiveStreak.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -84,7 +84,7 @@
 		0FD01AB92D64D4A00076F93C = {
 			isa = PBXGroup;
 			children = (
-				0FE4E9B52E1A9C9500D44A34 /* Features.xctestplan */,
+				0FE5B92A2E2259F8001C4E08 /* ActiveStreak.xctestplan */,
 				0F14C9632DF55A6400931A9C /* Features */,
 				0FD01AC42D64D4A10076F93C /* ActiveStreak */,
 				0FD01AD52D64D4A20076F93C /* ActiveStreakTests */,
@@ -180,7 +180,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					0FD01AC12D64D4A10076F93C = {
 						CreatedOnToolsVersion = 16.2;
@@ -315,6 +315,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -378,6 +379,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -407,7 +409,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ActiveStreak/Preview Content\"";
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -437,7 +438,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ActiveStreak/Preview Content\"";
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -465,7 +465,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -484,7 +483,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				MARKETING_VERSION = 1.0;
@@ -502,7 +500,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccy.ActiveStreakUITests;
@@ -519,7 +516,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AFM7G9CPR3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccy.ActiveStreakUITests;
