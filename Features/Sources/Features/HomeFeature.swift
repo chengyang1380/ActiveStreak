@@ -15,6 +15,7 @@ package struct HomeFeature {
     package struct State: Equatable {
         @Presents package var destination: Destination.State?
         package var workoutEntries: [WorkoutEntryDTO] = []
+        package var isLoading: Bool = false
         package init() {}
     }
 
@@ -39,12 +40,14 @@ package struct HomeFeature {
     package func core(state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .task:
+            state.isLoading = true
             return .run { send in
                 let items = try await workoutEntryClient.retrieve()
                 await send(.updateList(items))
             }
 
         case let .updateList(items):
+            state.isLoading = false
             state.workoutEntries = items
             return .none
 

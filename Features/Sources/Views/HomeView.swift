@@ -50,9 +50,19 @@ package struct HomeView: View {
             ) { addStore in
                 AddWorkoutEntryView(store: addStore)
             }
+            .refreshable {
+                store.send(.task)
+            }
         }
         .task {
             store.send(.task)
+        }
+        .overlay {
+            if store.state.isLoading {
+                ProgressView() {
+                    Text("Loading...")
+                }
+            }
         }
     }
 }
