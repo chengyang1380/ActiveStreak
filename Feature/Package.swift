@@ -69,11 +69,13 @@ let dependencyClientsLive = SingleTargetLibrary(
 let publicApp = SingleTargetLibrary(
     name: "PublicApp",
     dependencies: [
+        tca.targetDependency,
         features.targetDependency,
         views.targetDependency,
         dependencyClientsLive.targetDependency,
     ]
 )
+
 
 // MARK: - Package manifest
 
@@ -121,19 +123,19 @@ struct SourceControlDependency {
         var packageName: String
 
         switch package.kind {
-        case let .fileSystem(name: name, path: path):
-            guard let name = name ?? URL(string: path)?.lastPathComponent else {
-                fatalError("No package name found. Path: \(path)")
-            }
-            packageName = name
-        case let .sourceControl(name: name, location: location, _):
-            guard let name = name ?? URL(string: location)?.lastPathComponent
-            else {
-                fatalError("No package name found. Location: \(location)")
-            }
-            packageName = name
-        default:
-            fatalError("Unsupported dependency kind: \(package.kind)")
+            case let .fileSystem(name: name, path: path):
+                guard let name = name ?? URL(string: path)?.lastPathComponent else {
+                    fatalError("No package name found. Path: \(path)")
+                }
+                packageName = name
+            case let .sourceControl(name: name, location: location, _):
+                guard let name = name ?? URL(string: location)?.lastPathComponent
+                else {
+                    fatalError("No package name found. Location: \(location)")
+                }
+                packageName = name
+            default:
+                fatalError("Unsupported dependency kind: \(package.kind)")
         }
 
         return .product(

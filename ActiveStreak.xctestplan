@@ -17,16 +17,8 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:ActiveStreak.xcodeproj",
-        "identifier" : "0FD01ADB2D64D4A20076F93C",
-        "name" : "ActiveStreakUITests"
-      }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Features",
+        "containerPath" : "container:Feature",
         "identifier" : "FeaturesTests",
         "name" : "FeaturesTests"
       }

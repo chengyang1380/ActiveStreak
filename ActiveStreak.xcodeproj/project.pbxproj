@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F14CA402DF56D2E00931A9C /* PublicApp in Frameworks */ = {isa = PBXBuildFile; productRef = 0F14CA3F2DF56D2E00931A9C /* PublicApp */; };
+		0F142BA12E22A2B500FB0CBE /* PublicApp in Frameworks */ = {isa = PBXBuildFile; productRef = 0F142BA02E22A2B500FB0CBE /* PublicApp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F14C9632DF55A6400931A9C /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
+		0F142B9F2E22A14300FB0CBE /* Feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Feature; sourceTree = "<group>"; };
 		0FD01AC22D64D4A10076F93C /* ActiveStreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActiveStreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01AD22D64D4A20076F93C /* ActiveStreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD01ADC2D64D4A20076F93C /* ActiveStreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveStreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F14CA402DF56D2E00931A9C /* PublicApp in Frameworks */,
+				0F142BA12E22A2B500FB0CBE /* PublicApp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				0FE5B92A2E2259F8001C4E08 /* ActiveStreak.xctestplan */,
-				0F14C9632DF55A6400931A9C /* Features */,
+				0F142B9F2E22A14300FB0CBE /* Feature */,
 				0FD01AC42D64D4A10076F93C /* ActiveStreak */,
 				0FD01AD52D64D4A20076F93C /* ActiveStreakTests */,
 				0F14CA3E2DF56D2E00931A9C /* Frameworks */,
@@ -123,7 +123,7 @@
 			);
 			name = ActiveStreak;
 			packageProductDependencies = (
-				0F14CA3F2DF56D2E00931A9C /* PublicApp */,
+				0F142BA02E22A2B500FB0CBE /* PublicApp */,
 			);
 			productName = ActiveStreak;
 			productReference = 0FD01AC22D64D4A10076F93C /* ActiveStreak.app */;
@@ -569,7 +569,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0F14CA3F2DF56D2E00931A9C /* PublicApp */ = {
+		0F142BA02E22A2B500FB0CBE /* PublicApp */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PublicApp;
 		};
