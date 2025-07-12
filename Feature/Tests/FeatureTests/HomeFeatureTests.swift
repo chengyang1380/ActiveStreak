@@ -4,13 +4,6 @@
 //
 //  Created by ChengYangChen on 7/12/25.
 //
-import ComposableArchitecture
-import Features
-import Foundation
-import Models
-import Testing
-
-@testable import Features
 
 @MainActor
 struct HomeFeatureTests {
