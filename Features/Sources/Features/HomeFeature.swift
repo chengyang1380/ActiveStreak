@@ -42,7 +42,7 @@ package struct HomeFeature {
         case .task:
             state.isLoading = true
             return .run { send in
-                let items = try await workoutEntryClient.retrieve()
+                let items = try await workoutEntryClient.retrieve(.all(order: .orderByDateDesc))
                 await send(.updateList(items))
             }
 

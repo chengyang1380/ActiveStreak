@@ -82,9 +82,10 @@ public actor DataHandler {
         return item.persistentModelID
     }
 
-    public func retrieve() async throws -> [WorkoutEntryDTO] {
-        let descriptor = FetchDescriptor<WorkoutEntry>()
-        return try modelContext.fetch(descriptor).map { $0.toDTO() }
+    public func retrieve(query: WorkoutEntryQuery = .all(order: .orderByDateDesc)) async throws -> [WorkoutEntryDTO] {
+        let descriptor = WorkoutEntry.fetchDescriptorForQuery(query)
+        let results = try modelContext.fetch(descriptor)
+        return results.map { $0.toDTO() }
     }
 
     @discardableResult
