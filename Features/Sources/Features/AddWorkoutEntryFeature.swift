@@ -33,6 +33,7 @@ package struct AddWorkoutEntryFeature {
     }
 
     @Dependency(\.workoutEntryClient) var workoutEntryClient
+    @Dependency(\.dismiss) var dismiss
 
     package init() {}
 
@@ -84,9 +85,8 @@ package struct AddWorkoutEntryFeature {
 
         case .saveSuccess:
             state.toastMessage = "Successfully saved!"
-            return .run { send in
-                try await Task.sleep(for: .seconds(2))
-                await send(.dismissToast)
+            return .run { _ in
+                await self.dismiss()
             }
         }
     }

@@ -52,6 +52,9 @@ package struct HomeFeature {
             state.destination = .add(AddWorkoutEntryFeature.State())
             return .none
 
+        case .destination(.dismiss):
+            return .send(.task)
+
         case .destination:
             return .none
         }

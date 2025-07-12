@@ -1,0 +1,44 @@
+{
+  "configurations" : [
+    {
+      "id" : "3B97E087-2FB4-4AD2-A009-B116C4732875",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ActiveStreak.xcodeproj",
+      "identifier" : "0FD01AC12D64D4A10076F93C",
+      "name" : "ActiveStreak"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ActiveStreak.xcodeproj",
+        "identifier" : "0FD01ADB2D64D4A20076F93C",
+        "name" : "ActiveStreakUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Features",
+        "identifier" : "FeaturesTests",
+        "name" : "FeaturesTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ActiveStreak.xcodeproj",
+        "identifier" : "0FD01AD12D64D4A20076F93C",
+        "name" : "ActiveStreakTests"
+      }
+    }
+  ],
+  "version" : 1
+}
